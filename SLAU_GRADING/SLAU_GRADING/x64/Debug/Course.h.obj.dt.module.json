@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "SLAU_GRADING\\x64\\Debug\\Course.obj",
+            "outputs": [
+                "SLAU_GRADING\\x64\\Debug\\Course.h.obj.dt.module.json",
+                "SLAU_GRADING\\x64\\Debug\\Course.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

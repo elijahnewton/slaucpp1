@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\28q\\onedrive\\desktop\\slau_projects\\slau_grading\\recordsform.h",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\users\\28q\\onedrive\\desktop\\slau_projects\\slau_grading\\data\\databasehelper.h",
+            "c:\\users\\28q\\onedrive\\desktop\\slau_projects\\slau_grading\\ui\\moderntheme.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

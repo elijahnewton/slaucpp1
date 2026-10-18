@@ -1,0 +1,98 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly SLAU_GRADING, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly MySql.Data, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class SLAUGRADING.Data.DatabaseConfig: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String ConnectionString : Public, Static
+  Methods:
+    Save(String): PrivateScope, Public, Static, HideBySig
+    Load(): PrivateScope, Public, Static, HideBySig
+    ConfigPath(): PrivateScope, Public, Static, HideBySig
+Class SLAUGRADING.Data.DatabaseHelper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    TestConnection(String): PrivateScope, Public, Static, HideBySig
+    InitializeSchema(): PrivateScope, Public, Static, HideBySig
+    RegistrationExists(String): PrivateScope, Public, Static, HideBySig
+    SaveStudent(String, String): PrivateScope, Public, Static, HideBySig
+    SaveCourse(Int32, String, String, Double, String, Double): PrivateScope, Public, Static, HideBySig
+    SaveResult(Int32, Double, Double, String, Int32): PrivateScope, Public, Static, HideBySig
+    GetStudentByRegNo(String): PrivateScope, Public, Static, HideBySig
+    GetCoursesByStudentId(Int32): PrivateScope, Public, Static, HideBySig
+    GetAllStudents(): PrivateScope, Public, Static, HideBySig
+Struct SLAUGRADING.Models.Course: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(System.String, System.String, Double, System.String, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String courseCode : Public
+    System.String courseName : Public
+    Double marksPercentage : Public
+    System.String letterGrade : Public
+    Double gradePoints : Public
+Class SLAUGRADING.Core.GradingEngine: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Fields:
+    Double PassMark : Public, Static
+  Methods:
+    GetLetterGrade(Double): PrivateScope, Public, Static, HideBySig
+    GetGradePoints(String): PrivateScope, Public, Static, HideBySig
+    CreateCourse(String, String, Double): PrivateScope, Public, Static, HideBySig
+    CalculateGPA(Course[]): PrivateScope, Public, Static, HideBySig
+    DetermineStatus(Course[]): PrivateScope, Public, Static, HideBySig
+Class SLAUGRADING.UI.ModernTheme: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Drawing.Color Background : Public, Static
+    System.Drawing.Color Card : Public, Static
+    System.Drawing.Color Accent : Public, Static
+    System.Drawing.Color AccentDark : Public, Static
+    System.Drawing.Color TextDark : Public, Static
+    System.Drawing.Color TextLight : Public, Static
+    System.Drawing.Color Muted : Public, Static
+    System.Drawing.Color Danger : Public, Static
+    System.Drawing.Color Success : Public, Static
+    System.Drawing.Color Border : Public, Static
+    System.Drawing.Font TitleFont : Public, Static
+    System.Drawing.Font HeaderFont : Public, Static
+    System.Drawing.Font BodyFont : Public, Static
+    System.Drawing.Font SmallFont : Public, Static
+    System.Drawing.Font MonoFont : Public, Static
+  Methods:
+    ApplyBackground(Control): PrivateScope, Public, Static, HideBySig
+    CreateCard(Int32, Int32, Int32, Int32): PrivateScope, Public, Static, HideBySig
+    CreateButton(String, Int32, Int32, Int32, Int32, Color): PrivateScope, Public, Static, HideBySig
+    CreateTextBox(Int32, Int32, Int32, Int32): PrivateScope, Public, Static, HideBySig
+    CreateLabel(String, Int32, Int32, Int32, Int32): PrivateScope, Public, Static, HideBySig
+    StyleGrid(DataGridView): PrivateScope, Public, Static, HideBySig
+    DrawRoundedBorder(Object, PaintEventArgs): PrivateScope, Public, Static, HideBySig
+Class SLAUGRADING.SettingsForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String ConnectionString 'get set' : 
+  Methods:
+    get_ConnectionString(): PrivateScope, Public, HideBySig, SpecialName
+    set_ConnectionString(String): PrivateScope, Public, HideBySig, SpecialName
+Class SLAUGRADING.ResultsForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SLAUGRADING.RecordsForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.Data.DataTable): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class SLAUGRADING.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

@@ -1,0 +1,3 @@
+C:\Users\28Q\OneDrive\Desktop\SLAU_PROJECTS\SLAU_GRADING\x64\Debug\MySql.Data.dll
+C:\Users\28Q\OneDrive\Desktop\SLAU_PROJECTS\SLAU_GRADING\SLAU_GRADING\x64\Debug\SLAU_GRADING.vcxproj.AssemblyReference.cache
+C:\Users\28Q\OneDrive\Desktop\SLAU_PROJECTS\SLAU_GRADING\SLAU_GRADING\x64\Debug\SLAU_GRA.EA12D4A5.Up2Date
